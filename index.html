@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yummy</title>
+    <!-- fontawsome link -->
+    <link rel="stylesheet" href="./styles/all.min.css" />
+    <!-- bootstrap link -->
+    <link rel="stylesheet" href="./styles/bootstrap.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <!-- loading -->
+    <div
+      class="loading-screen position-fixed top-0 start-0 end-0 bottom-0 bg-black justify-content-center align-items-center"
+    >
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <!-- side-nav -->
+    <div class="side-nav position-fixed d-flex z-3">
+      <div
+        class="nav-content text-white d-flex flex-column justify-content-between align-items-start py-4 px-3 flex-wrap"
+      >
+        <div class="links">
+          <ul class="list-unstyled">
+            <li class="py-2 search position-relative">Search</li>
+            <li class="py-2 category position-relative">Categories</li>
+            <li class="py-2 area position-relative">Area</li>
+            <li class="py-2 ingredients position-relative">Ingredients</li>
+            <li class="py-2 contact position-relative">Contact Us</li>
+          </ul>
+        </div>
+        <div class="nav-footer text-white">
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-solid fa-globe"></i></a>
+          </div>
+
+          <p>Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between align-items-center h-100 py-3 px-2 bg-white"
+      >
+        <img class="logo" src="./assets/logo.png" alt="logo-image" />
+        <i class="open-close fa-solid fa-2x fa-align-justify"></i>
+        <div class="d-flex flex-column align-items-center">
+          <a href=""><i class="fa-solid fa-globe mb-1"></i></a>
+          <a href=""><i class="fa-solid fa-share-nodes mb-1"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container w-75" id="searchContainer"></div>
+    <div class="cards-holder min-vh-100 position-relative">
+      <div class="container">
+        <div class="row py-5 g-4" id="rowCat"></div>
+      </div>
+    </div>
+
+    <!-- JQ link -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <!-- bootsrap js link -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- main js link -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
