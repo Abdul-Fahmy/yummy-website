@@ -145,7 +145,7 @@ async function filterByArea(area) {
     `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`
   );
   let data = await response.json();
-  displayFood(data.meals);
+  displayFood(data.meals.slice(0, 20));
 }
 $(".area").on("click", function () {
   getArea();
@@ -163,7 +163,7 @@ async function filterByMainIngredient(ingredient) {
     `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
   );
   let data = await response.json();
-  displayFood(data.meals);
+  displayFood(data.meals.slice(0, 20));
 }
 function displayIngredients(arr) {
   $(".loading-screen").fadeIn(fadeValue);
