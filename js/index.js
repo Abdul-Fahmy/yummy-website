@@ -266,12 +266,16 @@ function displayMealsDetails(meal) {
     }
   }
 
-  let tags = meal.strTags?.split(",");
-  if (!tags) tags = [];
+  let tags;
+  if (meal.strTags != null) {
+    tags = meal.strTags.split(",");
+  } else {
+    tags = [];
+  }
 
-  let tagsStr = "";
+  let tagsHolder = "";
   for (let i = 0; i < tags.length; i++) {
-    tagsStr += `
+    tagsHolder += `
       <li class="alert alert-danger m-2 p-1">${tags[i]}</li>`;
   }
   let holder = `
@@ -292,7 +296,7 @@ function displayMealsDetails(meal) {
 
               <h3>Tags :</h3>
               <ul class="list-unstyled d-flex g-3 flex-wrap">
-                  ${tagsStr}
+                  ${tagsHolder}
               </ul>
 
               <a target="_blank" href="${meal.strSource}" class="btn btn-success">Source</a>
