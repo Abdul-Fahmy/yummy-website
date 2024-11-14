@@ -56,7 +56,7 @@ function displayFood(arr) {
               <img class="w-100" src="${arr[i].strMealThumb}" alt="Food-img" />
 
               <div
-                class="food-layer d-flex align-items-center position-absolute p-2"
+                class="food-layer d-flex align-items-center justify-content-center position-absolute p-2"
               >
                 <h2>${arr[i].strMeal}</h2>
               </div>
@@ -279,7 +279,7 @@ function displayMealsDetails(meal) {
       <li class="alert alert-danger m-2 p-1">${tags[i]}</li>`;
   }
   let holder = `
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
               <img class="w-100 rounded-3" src="${meal.strMealThumb}"
                   alt="">
                   <h2 class='text-white mt-3'>${meal.strMeal}</h2>
